@@ -1,0 +1,17 @@
+name: workflow
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0/5 0 * * *'
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: check ip
+        run: curl https://checkip.amazonaws.com/
+
+      - name: gdpr test
+        run: curl -v --fail-with-body https://search.yahoo.co.jp/
