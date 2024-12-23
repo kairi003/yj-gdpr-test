@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: check ip
-        run: curl https://checkip.amazonaws.com/
+        run: curl -sS https://checkip.amazonaws.com/
 
       - name: gdpr test
-        run: curl -v --fail-with-body https://search.yahoo.co.jp/
+        run: curl -vsS --fail-with-body https://search.yahoo.co.jp/
